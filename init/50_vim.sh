@@ -1,7 +1,2 @@
-# Backups, swaps and undos are stored here.
-mkdir -p $DOTFILES/caches/vim
-
-# Download Vim plugins.
-if [[ "$(type -P vim)" ]]; then
-  vim +PlugUpgrade +PlugUpdate +qall
-fi
+mkdir -p ~/.vim/autoload ~/.vim/bundle
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim

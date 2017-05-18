@@ -35,16 +35,16 @@ fi
 # Update APT.
 e_header "Updating APT"
 sudo apt-get -qq update
-sudo apt-get -qq dist-upgrade
+#sudo apt-get -qq dist-upgrade
 
 # Install APT packages.
+# Last two need moving to a python specific init file
 packages=(
   ansible
   build-essential
   cowsay
   git-core
   htop
-  id3tool
   jq
   libssl-dev
   mercurial
@@ -53,6 +53,8 @@ packages=(
   sl
   telnet
   tree
+  mysql-client
+  pylint
 )
 
 packages=($(setdiff "${packages[*]}" "$(dpkg --get-selections | grep -v deinstall | awk '{print $1}')"))
