@@ -1,0 +1,12 @@
+[ui]
+username = Daniel Cosser <dan@hiveip.co.uk>
+
+[extensions]
+hgflow = /home/vagrant/.hgflow/src/hgflow.py
+mq =
+record =
+shelve =
+color =
+
+[alias]
+glog = log -l 7 --graph
