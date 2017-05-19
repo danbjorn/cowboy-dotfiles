@@ -56,6 +56,8 @@ packages=(
   mysql-client
   pylint
   bash-completion
+  libmysqlclient-dev
+  python-dev
   zip
 )
 
