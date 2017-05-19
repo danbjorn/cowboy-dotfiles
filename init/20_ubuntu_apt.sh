@@ -38,7 +38,7 @@ sudo apt-get -qq update
 #sudo apt-get -qq dist-upgrade
 
 # Install APT packages.
-# Last two need moving to a python specific init file
+# Last few need moving to a python specific init file
 packages=(
   ansible
   build-essential
@@ -56,6 +56,7 @@ packages=(
   mysql-client
   pylint
   bash-completion
+  zip
 )
 
 packages=($(setdiff "${packages[*]}" "$(dpkg --get-selections | grep -v deinstall | awk '{print $1}')"))
