@@ -56,10 +56,17 @@ packages=(
   mysql-client
   pylint
   bash-completion
+  sshpass
   libmysqlclient-dev
   python-dev
   zip
+  libjpeg8-dev
 )
+#  libmysqlclient-dev # For mysql-python
+#  python-dev # For mysql-python
+#  zip # For datamart
+#  libjpeg8-dev # For Pillow
+#  sshpass # for sitedeploy
 
 packages=($(setdiff "${packages[*]}" "$(dpkg --get-selections | grep -v deinstall | awk '{print $1}')"))
 
